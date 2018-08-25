@@ -19,8 +19,8 @@ class CreateReservationsTable extends Migration
             $table->string('old_address');
             $table->string('new_address');
             $table->string('rent');
-            $table->unsignedInteger('house_image_id')->nullable();
-            $table->string('other')->nullable();
+            $table->unsignedInteger('house_image_id');
+            $table->string('other');
             $table->timestamps();
 
             $table->foreign('house_image_id')
