@@ -13,8 +13,8 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::where('user_id', $request->user()->id)->with('image')->first();
         if (isset($reservation->image)) {
-            $file_path = $reservation->image->file_path;
-            return view('reservation', ['reservation' => $reservation, 'file_path' => $file_path]);
+            $filePath = $reservation->image->file_path;
+            return view('reservation', ['reservation' => $reservation, 'filePath' => $filePath]);
         }
         return view('reservation', ['reservation' => $reservation]);
     }

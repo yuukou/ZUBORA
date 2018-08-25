@@ -26,7 +26,7 @@ class Reservation extends Model
         $reservation->user_id = $request->user()->id;
         $reservation->old_address = $request->old_address;
         $reservation->new_address = $request->new_address;
-        $reservation->rent = $request->price;
+        $reservation->rent = $request->rent;
         $reservation->house_image_id = $image->id;
         $reservation->other = $request->other;
 
@@ -45,7 +45,7 @@ class Reservation extends Model
         $reservation = self::where('user_id', $request->user()->id)->first();
         $reservation->old_address = $request->old_address;
         $reservation->new_address = $request->new_address;
-        $reservation->rent = $request->price;
+        $reservation->rent = $request->rent;
         $reservation->house_image_id = $image->id;
         $reservation->other = $request->other;
 

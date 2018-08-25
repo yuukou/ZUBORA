@@ -13,8 +13,8 @@ class MyPageController extends Controller
         $reservationData = $reservation->get($request);
 
         if (isset($reservation->image)) {
-            $file_path = $reservation->image->file_path;
-            return view('mypage', ['reservation' => $reservationData, 'file_path' => $file_path]);
+            $filePath = $reservation->image->file_path;
+            return view('mypage', ['reservation' => $reservationData, 'filePath' => $filePath]);
         }
 
         return view('mypage', ['reservation' => $reservationData]);
@@ -26,10 +26,10 @@ class MyPageController extends Controller
 
         if ($request->user()->id == $reservationData->user_id) {
             if (isset($reservationData->image)) {
-                $file_path = $reservationData->image->file_path;
-                $fileData = file_get_contents(storage_path('app/' . $file_path));
+                $filePath = $reservationData->image->file_path;
+                $fileData = file_get_contents(storage_path('app/' . $filePath));
                 return $responseFactory->make($fileData, 200, [
-                    'Content-Type' => 'image/jpeg'
+                    'Content-Type' => 'image/*',
                 ]);
             }
         }
