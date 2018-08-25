@@ -18,7 +18,7 @@
             </div>
         </div>
     </section>
-    <form id="login_success" method="post" action="/login_success.php">
+    <form id="login_success" method="post" action="/login_success.blade.php">
         <input id="csrf" type="hidden" name="csrf"/>
         <input id="code" type="hidden" name="code"/>
     </form>

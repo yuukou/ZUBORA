@@ -57,4 +57,9 @@ class Reservation extends Model
         $reservation = self::where('user_id', $request->user()->id)->with('image')->first();
         return $reservation;
     }
+
+    public function getByReservationId()
+    {
+
+    }
 }

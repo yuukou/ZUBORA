@@ -12,11 +12,11 @@
             <div class="zubora-description">
                 <h2 class="zubora-description-title">😙 ズボラ引っ越し 😙</h2>
                 <div class="zubora-description-text">
-                    これまでの引っ越しは、考えることが多すぎました。<br><br>
-                    これからは「引っ越したい！」という<br><br>
-                    気持ちだけで大丈夫。面倒なことはおまかせして、<br><br>
-                    もっと気軽に引っ越しちゃいましょう!!!<br><br>
-                    そんな、あたらしい引っ越しのかたちが<br><br>
+                    これまでの引っ越しは、考えることが多すぎました<br>
+                    これからは「引っ越したい！」という<br>
+                    気持ちだけで大丈夫。面倒なことはおまかせして<br>
+                    もっと気軽に引っ越しちゃいましょう!!!<br>
+                    そんな、あたらしい引っ越しのかたちが<br>
                     <p class="reason-under-comment">『ズボラ引っ越し』なのです</p>
                 </div>
                 <div class="zubora-description-induction">

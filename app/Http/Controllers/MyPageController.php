@@ -27,7 +27,7 @@ class MyPageController extends Controller
         if ($request->user()->id == $reservationData->user_id) {
             if (isset($reservationData->image)) {
                 $filePath = $reservationData->image->file_path;
-                $fileData = file_get_contents(storage_path('app/' . $filePath));
+                $fileData = file_get_contents(storage_path($filePath));
                 return $responseFactory->make($fileData, 200, [
                     'Content-Type' => 'image/*',
                 ]);
