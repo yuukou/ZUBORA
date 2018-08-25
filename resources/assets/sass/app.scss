@@ -86,7 +86,7 @@ table {
 }
 
 .header__wrapper {
-  margin: 15px 70px;
+  margin: 25px 70px;
 
   .header__logo {
     display: inline-block;
@@ -95,6 +95,7 @@ table {
 
   .header__logo__link {
     color: $twitter-color;
+    font-size: 18px;
 
     &:hover {
       text-decoration: none;
@@ -110,23 +111,41 @@ table {
       font-size: 30px;
       color: $twitter-color;
       position: absolute;
-      right: -30px;
+      right: 0;
+      font-weight: bolder;
     }
 
     .header-user-name {
       color: $twitter-color;
       font-size: 18px;
+      font-weight: bolder;
+      margin-right: 30px;
     }
 
     .pull-down-menu {
+      z-index: 1;
+      background-color: $white-color;
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px 0 rgba(66, 69, 153, .2);
+      width: 140px;
+      padding: 15px 0;
 
+      li {
+        padding: 10px 20px;
+        font-size: 15px;
+
+        &:hover {
+          background-color: yellow;
+        }
+      }
     }
 
     .pull-down-wrapper {
-      display: none;
       padding: 20px;
+      display: none;
       position: absolute;
-      right: 0;
+      right: -40px;
       top: 20px;
       z-index: 2;
     }
@@ -138,18 +157,20 @@ table {
   }
 
   .logout-link {
-    font-weight: 500;
+    font-size: 15px;
+
   }
 
   .header__sections {
     float: right;
     display: inline-block;
+    text-align: center;
   }
 
   .header__section {
-    margin-left: 10px;
     color: $black-color;
-    font-weight: 600;
+    font-weight: bolder;
+
   }
 
   &:after {

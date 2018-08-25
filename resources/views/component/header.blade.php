@@ -5,18 +5,21 @@
             @if(isset($user))
                 <a href="javascript:"><span class="header-user-name">{{ $user->name }}</span><i
                             class="material-icons">keyboard_arrow_down</i></a>
-                <ul class="header__sections js-pull-down-menu pull-down-wrapper">
-                    <li class="header__section"><a class="mypage-user-name"
-                                                   href="{{ route('mypage', ['id' => $user->id]) }}">マイページ</a>
-                    </li>
-                    <li class="header__section"><a href="{{ route('logout') }}" class="header__logo__link logout-link"
-                                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">ログアウト</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                              style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>
-                </ul>
+                <div class="pull-down-wrapper js-pull-down-menu">
+                    <ul class="header__sections pull-down-menu">
+                        <li class="header__section"><a class="mypage-user-name"
+                                                       href="{{ route('mypage', ['id' => $user->id]) }}">マイページ</a>
+                        </li>
+                        <li class="header__section"><a href="{{ route('logout') }}"
+                                                       class="header__logo__link logout-link"
+                                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">ログアウト</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                  style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             @else
                 <ul class="header__sections">
                     <li class="header__section"><a href="{{ route('welcome') }}" class="header__logo__link">ログイン</a>
