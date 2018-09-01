@@ -9,7 +9,7 @@ class ReservationRequestRule
         return [
             'old_address' => 'required|string|max:255',
             'new_address' => 'required|string|max:255',
-            'rent' => 'required|string',
+            'rent' => 'required|string|not_in: 0',
             'house' => 'required|mimes:jpeg,png',
             'other' => 'required|string|max:255',
         ];

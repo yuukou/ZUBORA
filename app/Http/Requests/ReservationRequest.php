@@ -16,4 +16,10 @@ class ReservationRequest extends FormRequest
     {
         return ReservationRequestRule::rules();
     }
+
+    public function messages() {
+        return [
+            'rent.not_in' => '家賃が選択されていません。',
+        ];
+}
 }

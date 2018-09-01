@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/logout', 'Auth\LogoutController@logout')->name('logout');
 
     Route::get('/mypage/edit', 'MyPageController@index')->name('mypage');
-    Route::get('/mypage/{reservationId}/image/display', 'MyPageController@imageDisplay')->name('mypage.image.display');
+    Route::get('/mypage/image/display', 'MyPageController@imageDisplay')->name('mypage.image.display');
 
     Route::get('/reservation/edit', 'ReservationController@editForm')->name('reservation.edit');
     Route::post('/reservation/add', 'ReservationController@add')->name('reservation.add');

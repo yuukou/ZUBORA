@@ -37,7 +37,7 @@
                     <th class="user_registration-information">登録写真</th>
                     <td class="user_registration-information">
                         <img class="user_registration-information-image"
-                             src="{{ route('mypage.image.display', ['reservationId' => $reservation->id]) }}">
+                             src="{{ route('mypage.image.display')}}">
                     </td>
                 </tr>
                 <tr class="user_registration-informations">

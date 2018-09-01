@@ -6,7 +6,7 @@
             <h1 class="top-title">ズボラ引っ越し</h1>
         </div>
     </section>
-    <section class="zubora-detail">
+    <section class="zubora-detail pc-only">
         <div class="content-wrapper">
             <img class="zubora-display" src="{{ asset('/images/スマホ画面.png') }}">
             <div class="zubora-description">
@@ -17,6 +17,29 @@
                     気持ちだけで大丈夫。面倒なことはおまかせして<br>
                     もっと気軽に引っ越しちゃいましょう!!!<br>
                     そんな、あたらしい引っ越しのかたちが<br>
+                    <p class="reason-under-comment">『ズボラ引っ越し』なのです</p>
+                </div>
+                <div class="zubora-description-induction">
+                    <div class="induction-accent">まずは、基本情報を入力！</div>
+                    <br>
+                    下記のボタンから、入力画面に飛んで、<br><br>
+                    基本情報を入力して下さい。<br><br>
+                    記入項目はたったの4つ！
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="zubora-detail sp-only">
+        <h2 class="zubora-description-title">😙 ズボラ引っ越し 😙</h2>
+        <div class="content-wrapper">
+            <img class="zubora-display" src="{{ asset('/images/スマホ画面.png') }}">
+            <div class="zubora-description">
+                <div class="zubora-description-text">
+                    これまでの引っ越しは、考えることが多すぎました。
+                    これからは「引っ越したい！」という
+                    気持ちだけで大丈夫。面倒なことはおまかせして、
+                    もっと気軽に引っ越しちゃいましょう!!!<br>
+                    そんな、あたらしい引っ越しのかたちが
                     <p class="reason-under-comment">『ズボラ引っ越し』なのです</p>
                 </div>
                 <div class="zubora-description-induction">

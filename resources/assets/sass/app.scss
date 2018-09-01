@@ -3,6 +3,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'colors';
 @import "mixins";
+@import "sizes";
 
 body {
   font-family: "Noto Sans Japanese", sans-serif;
@@ -20,6 +21,14 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
 }
 
 b {
@@ -106,6 +115,10 @@ table {
     float: right;
     display: inline-block;
     position: relative;
+
+    &.sp-only {
+      display: none;
+    }
 
     .material-icons {
       font-size: 30px;
@@ -266,6 +279,14 @@ table {
 }
 
 .zubora-detail {
+  &.pc-only {
+    display: block;
+  }
+
+  &.sp-only {
+    display: none;
+  }
+
   &:after {
     @include clear-both;
   }
@@ -615,4 +636,153 @@ table {
 .user_registration-information-image {
   width: 200px;
   height: 100px;
+}
+
+@media screen and (max-width: $pc-section-width) {
+  section {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .header {
+    margin: 0;
+    padding: 20px;
+
+    .header__wrapper {
+      margin: 0;
+    }
+
+    .header-menu {
+      .header__logo {
+        &.right-menu {
+          display: inline-block;
+        }
+      }
+
+      .sp-right-menus {
+        text-align: center;
+      }
+    }
+
+    .sp-right-menu {
+    }
+
+    .material-icons {
+      float: right;
+
+      &:after {
+        @include clear-both;
+      }
+    }
+  }
+
+  .conversion-btn-wrapper {
+    margin: 60px 0;
+  }
+
+  .main {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .zubora-detail {
+    &.sp-only {
+      display: block;
+    }
+
+    &.pc-only {
+      display: none;
+    }
+
+    &:after {
+      @include clear-both;
+    }
+
+    .zubora-display {
+      float: none;
+      width: 75%;
+      margin-bottom: 40px;
+    }
+
+    .zubora-description {
+      width: 100%;
+
+      .zubora-description-text {
+        width: 100%;
+        text-align: center;
+      }
+
+      .zubora-description-induction {
+        width: 100%;
+      }
+    }
+  }
+
+  .reasons {
+    width: 100%;
+
+    .reason-detail-wrapper {
+      margin-bottom: 40px;
+
+      .reason-details {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        padding-bottom: 40px;
+
+        .reason-image {
+          width: 90%;
+          height: 90%;
+        }
+      }
+
+      .zubora-reason-details {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        padding-bottom: 70px;
+
+        &:last-child {
+          padding-bottom: 40px;
+        }
+
+        .reason-detail {
+          margin-bottom: 30px;
+        }
+
+        .zubora-reason-image {
+          width: 90%;
+        }
+      }
+    }
+
+    .reason-conversion-title {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
 }

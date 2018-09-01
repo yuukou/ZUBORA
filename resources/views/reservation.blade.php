@@ -21,6 +21,7 @@
                     <div class="form-element">
                         <label class="form-label">希望家賃</label>
                         <select required name="rent">
+                            <option name="rent" value="0">選択してください</option>
                             <option name="rent" value="~10万円">~10万円</option>
                             <option name="rent" value="~15万円">~15万円</option>
                             <option name="rent" value="~20万円">~20万円</option>

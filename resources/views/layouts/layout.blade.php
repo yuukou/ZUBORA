@@ -20,14 +20,10 @@
 </head>
 <body>
 @include('component.header')
-<div class="">
-    <div class="">
-        <main role="main" class="">
-            <div class="main">
-                @yield('content')
-            </div>
-        </main>
+<main role="main">
+    <div class="main">
+        @yield('content')
     </div>
-</div>
+</main>
 </body>
 </html>
